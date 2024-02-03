@@ -1,0 +1,195 @@
+
+
+/* стили для страници обмена и возврата + оплата и доставка */
+.logo-bg-white{
+	fill: #E0BEA2;
+
+}
+.svg-icon{
+	fill: #E0BEA2;
+}
+.nav-list-color{
+	color: #252525;
+}
+.arrow-bg{
+	fill: #252525 !important;
+}
+.burger-bg-white{
+	fill: #E0BEA2 !important;
+}
+
+.top-exchange{
+	padding-bottom: 60px;
+}
+.top-exchange-title{
+	font-family: var(--font-Raleway);
+	font-size: 20px;
+	font-weight: 300;
+	margin: 144px 0 20px;
+}
+.top-exchange-text{
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
+.mb-text{
+	margin-bottom: 20px;
+}
+.top-exchange-list{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.top-exchange-item{
+	width: 165px;
+}
+
+.top-exchange-item svg {
+	margin-bottom: 10px;
+}
+
+
+.top-puyment{
+	padding-bottom: 60px;
+}
+.top-puyment-content{
+	display: flex;
+	gap: 40px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+.content-list-text{
+	margin-bottom: 10px;
+}
+
+.content-list{
+	display: flex;
+	flex-direction: column;
+	list-style:disc;
+	gap: 5px;
+	width: 470px;
+	margin-left: 20px;
+}
+
+.title_puyment{
+	margin: 0 0 25px;
+}
+
+.list-puyment{
+	display: flex;
+	line-height: 20px;
+	gap: 55px;
+	font-weight: 300;
+}
+.one{
+	width: 207px;
+}
+.two{
+	width: 146px;
+}
+.list-puyment-item{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.three{
+	width: 490px;
+}
+.svg-puyment{
+	width: 45px;
+	height: 50px;
+}
+
+
+.top-about{
+	padding-bottom: 60px;
+	font-weight: 300;
+}
+.about-title{
+	margin-bottom: 30px;
+}
+.top-about-list{
+	display: flex;
+	gap: 113px;
+	margin-bottom: 100px;
+}
+
+.top-about-item{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.top-about-items{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.top-group-icon{
+	display: flex;
+	gap: 15px;
+}
+
+@media (max-width: 1024px) {
+	.top-exchange-list{
+		flex-wrap: wrap;
+	}
+
+	.top-puyment-content{
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.list-puyment{
+		flex-wrap: wrap;
+	}
+
+	.top-about-list{
+		gap: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+/* TABLET планшет*/
+@media (min-width: 425px) and (max-width: 1024px) {
+	.top-exchange-text{
+		width: 600px;
+	}
+	.top-puyment-content{
+		font-size: 14px;
+		width: 100%;
+	}
+}
+
+/* MOBILE мобилка*/
+@media (max-width: 425px) {
+	.top-exchange-title{
+		margin-top: 100px;
+	}
+	.top-exchange-item{
+		width: 100%;
+	}
+	.top-puyment-content {
+		gap: 15px;
+		margin-bottom: 15px;
+	}
+	.content-list{
+		width: 100%;
+	}
+	.title_puyment{
+		margin: 0 0 15px;
+	}
+	.list-puyment{
+		gap: 15px;
+	}
+	.three{
+		width: 100%;
+	}
+	.top-about-list{
+		margin-bottom: 60px;
+		justify-content: start;
+	}
+}
