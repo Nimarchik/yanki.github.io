@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANKI</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+
+                    <!-- БУРГЕР -->
+                    <button class="nav__btn">
+                        <svg class="burger burger-bg-white" xmlns="http://www.w3.org/2000/svg" width="34" height="24"
+                            viewBox="0 0 34 24" fill="">
+                            <rect width="34" height="4" fill="" />
+                            <rect y="10" width="26" height="4" fill="" />
+                            <rect y="20" width="18" height="4" fill="" />
+                        </svg>
+                    </button>
+                    <div class="nav-btn-content">
+                        <svg class="close-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="27"
+                            viewBox="0 0 28 27" fill="none">
+                            <rect x="3" width="34" height="4" transform="rotate(45 3 0)" fill="#CCA88A" />
+                            <rect y="24.0416" width="34" height="4" transform="rotate(-45 0 24.0416)" fill="#CCA88A" />
+                        </svg>
+                        <div class="nav_btn-group">
+                            <input type="search" class="search-mobile" placeholder="Введіть ваш запит">
+                            <div class="dropdown mobile-drop">
+                                <span id="selectedCurrency">UAN</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <path
+                                        d="M7.48584 7.88906L11.3749 4L12.4858 5.11094L7.48584 10.1109L2.48584 5.11094L3.59678 4L7.48584 7.88906Z"
+                                        fill="#252525" />
+                                </svg>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <a class="drop-link" href="#" onclick="selectCurrency('UAN')">UAN</a>
+                                    <a class="drop-link" href="#" onclick="selectCurrency('USD')">USD</a>
+                                    <a class="drop-link" href="#" onclick="selectCurrency('EUR')">EUR</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="btn_list">
+                            <li class="btn_list-item">
+                                <a href="puyment.html" class="nav_list-link">ОПЛАТА ТА ДОСТАВКА</a>
+                            </li>
+                            <li class="btn_list-item">
+                                <a href="exchange.html" class="nav_list-link">УМОВИ ПОВЕРНЕННЯ</a>
+                            </li>
+                            <li class="btn_list-item">
+                                <a href="about.html" class="nav_list-link">КОНТАКТИ</a>
+                            </li>
+
+                        </ul>
+
+                        <ul class=" media-mobile">
+                            <li class="nav_list-item">
+                                <a href="#" class="nav_list-link">NEW</a>
+                            </li>
+                            <li class="nav_list-item">
+                                <a href="catalog.html" class="nav_list-link">КАТАЛОГ</a>
+                            </li>
+                            <li class="nav_list-item">
+                                <a href="about.html" class="nav_list-link">О НАС</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <ul class="nav_list nav-list-color">
+                        <li class="nav_list-item">
+                            <a href="#" class="nav_list-link">NEW</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="catalog.html" class="nav_list-link active">КАТАЛОГ</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="#" class="nav_list-link">О НАС</a>
+                        </li>
+                    </ul>
+
+                    <a href="index.html" class="logo-link">
+                        <svg class="svg-logo logo-bg-white" xmlns="http://www.w3.org/2000/svg" width="158" height="40"
+                            viewBox="0 0 159 40" fill="none">
+                            <path
+                                d="M4.33803 0L17.4085 21.5211L30.5915 0H34.8732L19.3803 25.1268V40H15.4366V25.0141L0 0H4.33803Z"
+                                fill="inherit" />
+                            <path
+                                d="M48.7474 0H52.0713L68.691 40H64.522L59.3389 27.493H41.3671L36.2403 40H32.015L48.7474 0ZM58.4375 24.3944L50.3812 4.61972L42.2121 24.3944H58.4375Z"
+                                fill="inherit" />
+                            <path
+                                d="M78.3688 7.26761V40H74.4252V0H77.6928L103.946 33.3521V0.0563369H107.89V40H104.228L78.3688 7.26761Z"
+                                fill="inherit" />
+                            <path
+                                d="M117.944 40V0.0563369H121.888V23.2676L143.916 0H148.254L131.916 17.5775L149.099 40H144.648L129.381 19.9437L121.888 27.7183V40H117.944Z"
+                                fill="inherit" />
+                            <path d="M154.146 40V0H158.089V40H154.146Z" fill="inherit" />
+                        </svg></a>
+
+                    <div class="price_drop nav-list-color">
+
+                        <div class="dropdown">
+
+                            <span id="selectedCurrency">UAN</span>
+
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="18"
+                                viewBox="0 0 19 18" fill="none">
+                                <path
+                                    d="M9.01855 9.88903L12.9076 5.99997L14.0186 7.11091L9.01855 12.1109L4.01855 7.1109L5.12949 5.99997L9.01855 9.88903Z"
+                                    fill="#252525" />
+                            </svg>
+
+                            <div class="dropdown-content" id="myDropdown">
+                                <a class="drop-link" href="#" onclick="selectCurrency('UAN')">UAN</a>
+                                <a class="drop-link" href="#" onclick="selectCurrency('USD')">USD</a>
+                                <a class="drop-link" href="#" onclick="selectCurrency('EUR')">EUR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="list_icon">
+                        <li class="icon-item search">
+                            <input type="search" class="searches" placeholder="Введіть ваш запит">
+
+                        </li>
+                        <li class="icon-item ">
+                            <svg class="svg-icon about" class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="25"
+                                height="25" viewBox="0 0 25 25" fill="none">
+                                <g clip-path="url(#clip0_100_31)">
+                                    <path
+                                        d="M2.5 25C2.5 22.4741 3.5034 20.0517 5.28946 18.2656C7.07552 16.4796 9.49794 15.4762 12.0238 15.4762C14.5497 15.4762 16.9721 16.4796 18.7582 18.2656C20.5442 20.0517 21.5476 22.4741 21.5476 25H19.1667C19.1667 23.1056 18.4141 21.2888 17.0746 19.9492C15.735 18.6097 13.9182 17.8571 12.0238 17.8571C10.1294 17.8571 8.31259 18.6097 6.97305 19.9492C5.6335 21.2888 4.88095 23.1056 4.88095 25H2.5ZM12.0238 14.2857C8.07738 14.2857 4.88095 11.0893 4.88095 7.14286C4.88095 3.19643 8.07738 0 12.0238 0C15.9702 0 19.1667 3.19643 19.1667 7.14286C19.1667 11.0893 15.9702 14.2857 12.0238 14.2857ZM12.0238 11.9048C14.6548 11.9048 16.7857 9.77381 16.7857 7.14286C16.7857 4.5119 14.6548 2.38095 12.0238 2.38095C9.39286 2.38095 7.2619 4.5119 7.2619 7.14286C7.2619 9.77381 9.39286 11.9048 12.0238 11.9048Z"
+                                        fill="inherit" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_100_31">
+                                        <rect width="25" height="25" fill="inherit" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="icon-item">
+                            <svg class="svg-icon fav" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                viewBox="0 0 25 25" fill="none">
+                                <g clip-path="url(#clip0_100_34)">
+                                    <path
+                                        d="M12.501 3.16119C15.4372 0.524988 19.9746 0.612487 22.8033 3.44618C25.6308 6.28113 25.7283 10.796 23.0983 13.741L12.4985 24.3558L1.90122 13.741C-0.728729 10.796 -0.62998 6.27363 2.19622 3.44618C5.02741 0.616237 9.55608 0.521238 12.501 3.16119ZM21.0334 5.2124C19.1584 3.33494 16.1335 3.25869 14.171 5.02115L12.5023 6.51863L10.8323 5.0224C8.86359 3.25744 5.8449 3.33494 3.96493 5.2149C2.10247 7.07737 2.00872 10.0586 3.72494 12.0285L12.4998 20.8171L21.2746 12.0298C22.9921 10.0586 22.8983 7.08112 21.0334 5.2124Z"
+                                        fill="inherit" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_100_34">
+                                        <rect width="25" height="25" fill="inherit" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="icon-item about-item">
+                            <svg class="cart-icon svg-icon" id="cart-icon" xmlns="http://www.w3.org/2000/svg" width="25"
+                                height="25" viewBox="0 0 25 25" fill="none">
+                                <g clip-path="url(#clip0_100_37)">
+                                    <path
+                                        d="M3.81655 5.48063L0 1.66525L1.66525 0L5.48063 3.81655H23.4183C23.6017 3.81654 23.7826 3.85941 23.9466 3.94173C24.1105 4.02406 24.2529 4.14356 24.3624 4.2907C24.4719 4.43785 24.5456 4.60856 24.5774 4.78921C24.6092 4.96986 24.5984 5.15545 24.5457 5.33117L21.7213 14.746C21.6486 14.9886 21.4997 15.2012 21.2966 15.3524C21.0935 15.5035 20.847 15.5852 20.5938 15.5851H6.17027V17.9389H19.1157V20.2926H4.99341C4.68129 20.2926 4.38195 20.1686 4.16125 19.9479C3.94054 19.7272 3.81655 19.4278 3.81655 19.1157V5.48063ZM6.17027 6.17027V13.2314H19.7183L21.8366 6.17027H6.17027ZM5.58184 25C5.11366 25 4.66465 24.814 4.33359 24.483C4.00254 24.1519 3.81655 23.7029 3.81655 23.2347C3.81655 22.7665 4.00254 22.3175 4.33359 21.9865C4.66465 21.6554 5.11366 21.4694 5.58184 21.4694C6.05002 21.4694 6.49903 21.6554 6.83009 21.9865C7.16114 22.3175 7.34713 22.7665 7.34713 23.2347C7.34713 23.7029 7.16114 24.1519 6.83009 24.483C6.49903 24.814 6.05002 25 5.58184 25ZM19.7041 25C19.236 25 18.7869 24.814 18.4559 24.483C18.1248 24.1519 17.9388 23.7029 17.9388 23.2347C17.9388 22.7665 18.1248 22.3175 18.4559 21.9865C18.7869 21.6554 19.236 21.4694 19.7041 21.4694C20.1723 21.4694 20.6213 21.6554 20.9524 21.9865C21.2834 22.3175 21.4694 22.7665 21.4694 23.2347C21.4694 23.7029 21.2834 24.1519 20.9524 24.483C20.6213 24.814 20.1723 25 19.7041 25Z"
+                                        fill="inherit" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_100_37">
+                                        <rect width="25" height="25" fill="inherit" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span id="cart-counter" class="cart-counter">0</span>
+                        </li>
+                    </ul>
+            </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="top_catalog">
+                <div class="container">
+                    <button class="catalog-article-btn">
+                        <p>Фільтри
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                                fill="none">
+                                <g clip-path="url(#clip0_372_321)">
+                                    <path
+                                        d="M8.75 8.75V12.5L6.25 13.75V8.75L2.5 3.125V1.875H12.5V3.125L8.75 8.75ZM4.0025 3.125L7.5 8.37125L10.9975 3.125H4.0025Z"
+                                        fill="#E0BEA2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_372_321">
+                                        <rect width="15" height="15" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </p>
+
+                        <svg class="svg-catalog" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 18 18" fill="none">
+                            <path d="M9 9.88906L12.8891 6L14 7.11094L9 12.1109L4 7.11094L5.11094 6L9 9.88906Z"
+                                fill="#E0BEA2" />
+                        </svg>
+                    </button>
+                    <article class="catalog-article">
+                        <a href="#" class="catalo-article-link">New</a>
+                        <a href="#" class="catalo-article-link">Bestsellers</a>
+                        <a href="#" class="catalo-article-link">Верхній одяг</a>
+                        <a href="#" class="catalo-article-link">Шуби</a>
+                        <a href="#" class="catalo-article-link">Тренчі</a>
+                        <a href="#" class="catalo-article-link">Пальто</a>
+                        <a href="#" class="catalo-article-link">Пуховики та жилети</a>
+                        <a href="#" class="catalo-article-link">Костюми</a>
+                        <a href="#" class="catalo-article-link">Жакеты
+                        </a>
+                        <a href="#" class="catalo-article-link">Сукні</a>
+                        <a href="#" class="catalo-article-link">Сорочки та блузи</a>
+                        <a href="#" class="catalo-article-link">Спідниці</a>
+                        <a href="#" class="catalo-article-link">Футболки та топи</a>
+                        <a href="#" class="catalo-article-link">Аксесуари</a>
+                        <a href="#" class="catalo-article-link">Sale</a>
+                        <a href="#" class="catalo-article-link">Summer</a>
+                        <a href="#" class="catalo-article-link">Посмотреть всё</a>
+                    </article>
+
+                    <div class="carts-products">
+                    </div>
+
+                    <div class="container-products">
+
+                        <div class="product-card" data-product-id="1">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img1.jpg" alt="" class="product-card-img ">
+                            <h2 class="product-card-title">Біла куртка</h2>
+                            <p class="product-card-price">2900 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="2">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img2.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Синє пальто</h2>
+                            <p class="product-card-price">3150 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="3">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img3.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Бежева шуба</h2>
+                            <p class="product-card-price">4200 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="4">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img4.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Синя парка</h2>
+                            <p class="product-card-price">2900 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="5">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img1.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Біла куртка</h2>
+                            <p class="product-card-price">2900 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="6">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img2.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Синє пальто</h2>
+                            <p class="product-card-price">3150 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="7">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img3.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Бежева шуба</h2>
+                            <p class="product-card-price">4200 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="8">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img4.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Синя парка</h2>
+                            <p class="product-card-price">2900 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="9">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img1.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Біла куртка</h2>
+                            <p class="product-card-price">2900 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="10">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img2.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Синє пальто</h2>
+                            <p class="product-card-price">3150 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="11">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img3.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Бежева шуба</h2>
+                            <p class="product-card-price">4200 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="product-card" data-product-id="12">
+                            <div class="prodect-card-favorite">
+                                <svg class="product-card-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                    viewBox="0 0 15 15" fill="inherit">
+                                    <g clip-path="url(#clip0_267_894)">
+                                        <path
+                                            d="M7.50061 1.89671C9.26233 0.314993 11.9848 0.367492 13.682 2.06771C15.3785 3.76868 15.437 6.47763 13.859 8.24459L7.49911 14.6135L1.14073 8.24459C-0.437237 6.47763 -0.377988 3.76418 1.31773 2.06771C3.01645 0.369742 5.73365 0.312743 7.50061 1.89671ZM12.62 3.12744C11.495 2.00096 9.68007 1.95521 8.50259 3.01269L7.50136 3.91118L6.49938 3.01344C5.31816 1.95446 3.50694 2.00096 2.37896 3.12894C1.26148 4.24642 1.20523 6.03514 2.23496 7.21711L7.49986 12.4903L12.7648 7.21786C13.7952 6.03514 13.739 4.24867 12.62 3.12744Z"
+                                            fill="inherit" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_267_894">
+                                            <rect width="15" height="15" fill="inherit" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <img src="img/catalog-img4.jpg" alt="" class="product-card-img">
+                            <h2 class="product-card-title">Синя парка</h2>
+                            <p class="product-card-price">2900 грн</p>
+                            <p class="product-card-size">XS M L</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+
+                        <div class="modal" id="cart-modal" style="display: none;">
+
+                            <span class="close" id="close-modal">&times;</span>
+                            <div class="cart" style="display: block;">
+                                <div class="container">
+                                    <h2 class="title-cart">Ваше замовлення</h2>
+                                    <ul id="cart-items"></ul>
+
+
+                                    <div class="forms-modal">
+                                        <h3 class="forms-modal-title">Оформлення замовлення</h3>
+                                        <form action="" class="forms">
+                                            <h4 class="personal-info-title">Персональні дані:</h4>
+                                            <div class="personal-info">
+                                                <input type="text" class="personal-info-inp" placeholder="Ваше ім'я*">
+                                                <input type="text" class="personal-info-inp" placeholder="Ваше прізвище*">
+                                                <input type="email" class="personal-info-inp" placeholder="Ваш e-mail*">
+                                                <input type="tel" class="personal-info-inp" placeholder="Ваш телефон*">
+                                            </div>
+                                            <h5 class="personal-info-title">Спосіб доставки:</h5>
+                                            <div class="personal-info-check">
+                                                <ul class="personal-info-check-list">
+                                                    <li class="personal-info-check-item">
+                                                        <h6 class="personal-info-check-item-title">По Україні:</h6>
+                                                        <input type="checkbox" name="" id="check-info-map" class="check-box">
+                                                        <label for="check-info-map">
+                                                            <p class="check-info-text">Самовивіз - вул. Велика Васильківська 14 (м. Льва Толстого)</p>
+                                                        </label>
+                                                        <input type="checkbox" name="" id="check-info-novpost" class="check-box">
+                                                        <label for="check-info-novpost">
+                                                            <p class="check-info-text">Нова Пошта</p>
+                                                        </label>
+                                                    </li>
+                                                    <li class="personal-info-check-item">
+                                                        <h6 class="personal-info-check-item-title">Міжнародна доставка:</h6>
+                                                        <input type="checkbox" name="" id="check-info-ukrpost" class="check-box">
+                                                        <label for="check-info-ukrpost">Украпочта / 1-3 тижні / 30$</label>
+                                                        <input type="checkbox" name="" id="check-info-dhl" class="check-box">
+                                                        <label for="check-info-dhl">DHL / 3-7 днів / 60$</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <h5 class="personal-info-title">Спосіб доставки:</h5>
+                                            <div class="personal-info">
+                                                <input type="text" class="personal-info-inp" placeholder="Місто*">
+                                                <input type="text" class="personal-info-inp" placeholder="Відділення пошти*">
+                                            </div>
+
+                                            <h5 class="personal-info-title">Ви можете оплатити покупку одним з нижче перерахованих способів:</h5>
+                                            <div class="personal-info-check">
+                                                <ul class="personal-info-check-list">
+                                                    <li class="personal-info-check-item">
+                                                        <input type="checkbox" name="" id="" class="check-box">
+                                                        <p class="check-text">Повна передоплата через Приват 24 <img src="img/privat24.svg" alt=""></p>
+                                                    </li>
+                                                    <li class="personal-info-check-item">
+                                                        <input type="checkbox" name="" id="" class="check-box">
+                                                        <p class="check-text">Післяплатою у відділенні Нової Пошти</p>
+                                                    </li>
+                                                    <li class="personal-info-check-item">
+                                                        <input type="checkbox" name="" id="" class="check-box">
+                                                        <p class="check-text">Денежным переводом  Visa/MasterCard Денежным переводом  Visa/MasterCard <img src="img/Visa_Inc.svg" alt=""><img src="img/Mastercard.svg" alt=""></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <h5 class="personal-info-title">Використання бонусного рахунку:</h5>
+                                            <div class="personal-info-bonus">
+                                                <input type="text" class="input-bonus" placeholder="Сума списання бонусів*">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <h4 class="footer-item-title">КОМПАНІЯ</h4>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">О нас
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Контакти</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <h4 class="footer-item-title">КОРИСНЕ</h4>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Оплата та доставка</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Умови повернення
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Бонусна система</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <h4 class="footer-item-title">ПОКУПЦЕВІ</h4>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Обране
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Публічна оферта</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">Політика конфіденційності</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <h4 class="footer-item-title">КОНТАКТИ</h4>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                fill="none">
+                                <g clip-path="url(#clip0_422_46)">
+                                    <path
+                                        d="M9.49992 7.12504C8.87003 7.12504 8.26594 7.37526 7.82054 7.82066C7.37514 8.26606 7.12492 8.87015 7.12492 9.50004C7.12492 10.1299 7.37514 10.734 7.82054 11.1794C8.26594 11.6248 8.87003 11.875 9.49992 11.875C10.1298 11.875 10.7339 11.6248 11.1793 11.1794C11.6247 10.734 11.8749 10.1299 11.8749 9.50004C11.8749 8.87015 11.6247 8.26606 11.1793 7.82066C10.7339 7.37526 10.1298 7.12504 9.49992 7.12504ZM9.49992 5.54171C10.5497 5.54171 11.5566 5.95875 12.2989 6.70108C13.0412 7.44341 13.4583 8.45023 13.4583 9.50004C13.4583 10.5499 13.0412 11.5567 12.2989 12.299C11.5566 13.0413 10.5497 13.4584 9.49992 13.4584C8.4501 13.4584 7.44329 13.0413 6.70095 12.299C5.95862 11.5567 5.54159 10.5499 5.54159 9.50004C5.54159 8.45023 5.95862 7.44341 6.70095 6.70108C7.44329 5.95875 8.4501 5.54171 9.49992 5.54171ZM14.6458 5.34379C14.6458 5.60625 14.5415 5.85795 14.3559 6.04353C14.1703 6.22912 13.9186 6.33337 13.6562 6.33337C13.3937 6.33337 13.142 6.22912 12.9564 6.04353C12.7708 5.85795 12.6666 5.60625 12.6666 5.34379C12.6666 5.08134 12.7708 4.82963 12.9564 4.64405C13.142 4.45847 13.3937 4.35421 13.6562 4.35421C13.9186 4.35421 14.1703 4.45847 14.3559 4.64405C14.5415 4.82963 14.6458 5.08134 14.6458 5.34379ZM9.49992 3.16671C7.54134 3.16671 7.2215 3.17225 6.31029 3.21262C5.68963 3.24192 5.27321 3.32504 4.88688 3.47546C4.54329 3.60846 4.2955 3.76758 4.03188 4.032C3.78409 4.2714 3.59357 4.56367 3.47454 4.887C3.32413 5.27492 3.241 5.69054 3.2125 6.31042C3.17134 7.18442 3.16659 7.49 3.16659 9.50004C3.16659 11.4586 3.17213 11.7785 3.2125 12.6897C3.24179 13.3095 3.32492 13.7268 3.47454 14.1123C3.60913 14.4567 3.76746 14.7045 4.03029 14.9673C4.29709 15.2333 4.54488 15.3924 4.88529 15.5238C5.27638 15.675 5.69279 15.759 6.31029 15.7875C7.18429 15.8286 7.48988 15.8334 9.49992 15.8334C11.4585 15.8334 11.7783 15.8278 12.6895 15.7875C13.3086 15.7582 13.7258 15.675 14.1122 15.5254C14.455 15.3916 14.7043 15.2325 14.9672 14.9697C15.234 14.7029 15.3931 14.4551 15.5245 14.1147C15.6749 13.7244 15.7588 13.3072 15.7873 12.6897C15.8285 11.8157 15.8333 11.5101 15.8333 9.50004C15.8333 7.54146 15.8277 7.22162 15.7873 6.31042C15.758 5.69133 15.6749 5.27333 15.5245 4.887C15.4052 4.564 15.215 4.27184 14.968 4.032C14.7287 3.78409 14.4364 3.59355 14.113 3.47467C13.725 3.32425 13.3086 3.24112 12.6895 3.21262C11.8155 3.17146 11.51 3.16671 9.49992 3.16671ZM9.49992 1.58337C11.6509 1.58337 11.9193 1.59129 12.7632 1.63087C13.6063 1.67046 14.1803 1.80267 14.6853 1.999C15.2078 2.20008 15.648 2.47242 16.0882 2.91179C16.4907 3.30754 16.8022 3.78626 17.001 4.31462C17.1965 4.81892 17.3295 5.39367 17.3691 6.23679C17.4063 7.08071 17.4166 7.34908 17.4166 9.50004C17.4166 11.651 17.4087 11.9194 17.3691 12.7633C17.3295 13.6064 17.1965 14.1804 17.001 14.6855C16.8028 15.2141 16.4912 15.6929 16.0882 16.0883C15.6923 16.4907 15.2136 16.8022 14.6853 17.0011C14.181 17.1966 13.6063 17.3296 12.7632 17.3692C11.9193 17.4064 11.6509 17.4167 9.49992 17.4167C7.34896 17.4167 7.08059 17.4088 6.23667 17.3692C5.39354 17.3296 4.81959 17.1966 4.3145 17.0011C3.78593 16.8028 3.30713 16.4912 2.91167 16.0883C2.50903 15.6926 2.19753 15.2139 1.99888 14.6855C1.80254 14.1812 1.67034 13.6064 1.63075 12.7633C1.59354 11.9194 1.58325 11.651 1.58325 9.50004C1.58325 7.34908 1.59117 7.08071 1.63075 6.23679C1.67034 5.39287 1.80254 4.81971 1.99888 4.31462C2.19698 3.78593 2.50855 3.30709 2.91167 2.91179C3.30724 2.50902 3.78601 2.19749 4.3145 1.999C4.81959 1.80267 5.39275 1.67046 6.23667 1.63087C7.08059 1.59367 7.34896 1.58337 9.49992 1.58337Z"
+                                        fill="#E0BEA2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_422_46">
+                                        <rect width="19" height="19" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-link-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                fill="none">
+                                <g clip-path="url(#clip0_422_49)">
+                                    <path
+                                        d="M9.49992 15.8334C11.1796 15.8334 12.7905 15.1661 13.9783 13.9784C15.166 12.7907 15.8333 11.1797 15.8333 9.50004C15.8333 7.82034 15.166 6.20943 13.9783 5.0217C12.7905 3.83397 11.1796 3.16671 9.49992 3.16671C7.82021 3.16671 6.20931 3.83397 5.02158 5.0217C3.83385 6.20943 3.16659 7.82034 3.16659 9.50004C3.16659 11.1797 3.83385 12.7907 5.02158 13.9784C6.20931 15.1661 7.82021 15.8334 9.49992 15.8334ZM9.49992 17.4167C5.12754 17.4167 1.58325 13.8724 1.58325 9.50004C1.58325 5.12767 5.12754 1.58337 9.49992 1.58337C13.8723 1.58337 17.4166 5.12767 17.4166 9.50004C17.4166 13.8724 13.8723 17.4167 9.49992 17.4167ZM7.03784 10.4263L5.06025 9.80958C4.63275 9.67896 4.63038 9.38446 5.15604 9.17308L12.8613 6.19642C13.3086 6.01433 13.562 6.24471 13.4171 6.82183L12.1053 13.0127C12.0135 13.4536 11.7483 13.5589 11.3801 13.3555L9.36059 11.8608L8.41929 12.7696C8.32271 12.863 8.24434 12.943 8.0955 12.9628C7.94746 12.9834 7.82554 12.939 7.73609 12.6936L7.04734 10.4207L7.03784 10.4263Z"
+                                        fill="#E0BEA2" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_422_49">
+                                        <rect width="19" height="19" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">+38(073) 096 36 44</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-link">info@yanki.com</a>
+                    </li>
+                </ul>
+
+
+                <div class="accordion">
+                    <div class="contentBx">
+                        <div class="label">
+                            <h4 class="footer-item-title-accord">КОМПАНІЯ </h4>
+                            <svg class="svg-accord" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <path
+                                    d="M7.48584 7.88906L11.3749 4L12.4858 5.11094L7.48584 10.1109L2.48584 5.11094L3.59678 4L7.48584 7.88906Z"
+                                    fill="#E0BEA2" />
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <a href="#" class="footer-link">О нас </a>
+                            <a href="#" class="footer-link">Контакти</a>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">
+                            <h4 class="footer-item-title-accord">КОРИСНЕ </h4>
+                            <svg class="svg-accord" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <path
+                                    d="M7.48584 7.88906L11.3749 4L12.4858 5.11094L7.48584 10.1109L2.48584 5.11094L3.59678 4L7.48584 7.88906Z"
+                                    fill="#E0BEA2" />
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <a href="#" class="footer-link">Оплата та доставка</a>
+                            <a href="#" class="footer-link">Умови повернення
+                            </a>
+                            <a href="#" class="footer-link">Бонусна система</a>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">
+                            <h4 class="footer-item-title-accord">ПОКУПЦЕВІ </h4>
+                            <svg class="svg-accord" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <path
+                                    d="M7.48584 7.88906L11.3749 4L12.4858 5.11094L7.48584 10.1109L2.48584 5.11094L3.59678 4L7.48584 7.88906Z"
+                                    fill="#E0BEA2" />
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <a href="#" class="footer-link">Обране
+                            </a>
+                            <a href="#" class="footer-link">Публічна оферта</a>
+                            <a href="#" class="footer-link">Політика конфіденційності</a>
+                        </div>
+                    </div>
+
+                    <div class="contentBx">
+                        <div class="label">
+                            <h4 class="footer-item-title-accord">КОНТАКТИ
+                            </h4>
+                            <svg class="svg-accord" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <path
+                                    d="M7.48584 7.88906L11.3749 4L12.4858 5.11094L7.48584 10.1109L2.48584 5.11094L3.59678 4L7.48584 7.88906Z"
+                                    fill="#E0BEA2" />
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="svg-group">
+                                <a href="#" class="footer-link-svg">
+                                    <svg class="svg-accord" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                        viewBox="0 0 19 19" fill="none">
+                                        <g clip-path="url(#clip0_422_46)">
+                                            <path
+                                                d="M9.49992 7.12504C8.87003 7.12504 8.26594 7.37526 7.82054 7.82066C7.37514 8.26606 7.12492 8.87015 7.12492 9.50004C7.12492 10.1299 7.37514 10.734 7.82054 11.1794C8.26594 11.6248 8.87003 11.875 9.49992 11.875C10.1298 11.875 10.7339 11.6248 11.1793 11.1794C11.6247 10.734 11.8749 10.1299 11.8749 9.50004C11.8749 8.87015 11.6247 8.26606 11.1793 7.82066C10.7339 7.37526 10.1298 7.12504 9.49992 7.12504ZM9.49992 5.54171C10.5497 5.54171 11.5566 5.95875 12.2989 6.70108C13.0412 7.44341 13.4583 8.45023 13.4583 9.50004C13.4583 10.5499 13.0412 11.5567 12.2989 12.299C11.5566 13.0413 10.5497 13.4584 9.49992 13.4584C8.4501 13.4584 7.44329 13.0413 6.70095 12.299C5.95862 11.5567 5.54159 10.5499 5.54159 9.50004C5.54159 8.45023 5.95862 7.44341 6.70095 6.70108C7.44329 5.95875 8.4501 5.54171 9.49992 5.54171ZM14.6458 5.34379C14.6458 5.60625 14.5415 5.85795 14.3559 6.04353C14.1703 6.22912 13.9186 6.33337 13.6562 6.33337C13.3937 6.33337 13.142 6.22912 12.9564 6.04353C12.7708 5.85795 12.6666 5.60625 12.6666 5.34379C12.6666 5.08134 12.7708 4.82963 12.9564 4.64405C13.142 4.45847 13.3937 4.35421 13.6562 4.35421C13.9186 4.35421 14.1703 4.45847 14.3559 4.64405C14.5415 4.82963 14.6458 5.08134 14.6458 5.34379ZM9.49992 3.16671C7.54134 3.16671 7.2215 3.17225 6.31029 3.21262C5.68963 3.24192 5.27321 3.32504 4.88688 3.47546C4.54329 3.60846 4.2955 3.76758 4.03188 4.032C3.78409 4.2714 3.59357 4.56367 3.47454 4.887C3.32413 5.27492 3.241 5.69054 3.2125 6.31042C3.17134 7.18442 3.16659 7.49 3.16659 9.50004C3.16659 11.4586 3.17213 11.7785 3.2125 12.6897C3.24179 13.3095 3.32492 13.7268 3.47454 14.1123C3.60913 14.4567 3.76746 14.7045 4.03029 14.9673C4.29709 15.2333 4.54488 15.3924 4.88529 15.5238C5.27638 15.675 5.69279 15.759 6.31029 15.7875C7.18429 15.8286 7.48988 15.8334 9.49992 15.8334C11.4585 15.8334 11.7783 15.8278 12.6895 15.7875C13.3086 15.7582 13.7258 15.675 14.1122 15.5254C14.455 15.3916 14.7043 15.2325 14.9672 14.9697C15.234 14.7029 15.3931 14.4551 15.5245 14.1147C15.6749 13.7244 15.7588 13.3072 15.7873 12.6897C15.8285 11.8157 15.8333 11.5101 15.8333 9.50004C15.8333 7.54146 15.8277 7.22162 15.7873 6.31042C15.758 5.69133 15.6749 5.27333 15.5245 4.887C15.4052 4.564 15.215 4.27184 14.968 4.032C14.7287 3.78409 14.4364 3.59355 14.113 3.47467C13.725 3.32425 13.3086 3.24112 12.6895 3.21262C11.8155 3.17146 11.51 3.16671 9.49992 3.16671ZM9.49992 1.58337C11.6509 1.58337 11.9193 1.59129 12.7632 1.63087C13.6063 1.67046 14.1803 1.80267 14.6853 1.999C15.2078 2.20008 15.648 2.47242 16.0882 2.91179C16.4907 3.30754 16.8022 3.78626 17.001 4.31462C17.1965 4.81892 17.3295 5.39367 17.3691 6.23679C17.4063 7.08071 17.4166 7.34908 17.4166 9.50004C17.4166 11.651 17.4087 11.9194 17.3691 12.7633C17.3295 13.6064 17.1965 14.1804 17.001 14.6855C16.8028 15.2141 16.4912 15.6929 16.0882 16.0883C15.6923 16.4907 15.2136 16.8022 14.6853 17.0011C14.181 17.1966 13.6063 17.3296 12.7632 17.3692C11.9193 17.4064 11.6509 17.4167 9.49992 17.4167C7.34896 17.4167 7.08059 17.4088 6.23667 17.3692C5.39354 17.3296 4.81959 17.1966 4.3145 17.0011C3.78593 16.8028 3.30713 16.4912 2.91167 16.0883C2.50903 15.6926 2.19753 15.2139 1.99888 14.6855C1.80254 14.1812 1.67034 13.6064 1.63075 12.7633C1.59354 11.9194 1.58325 11.651 1.58325 9.50004C1.58325 7.34908 1.59117 7.08071 1.63075 6.23679C1.67034 5.39287 1.80254 4.81971 1.99888 4.31462C2.19698 3.78593 2.50855 3.30709 2.91167 2.91179C3.30724 2.50902 3.78601 2.19749 4.3145 1.999C4.81959 1.80267 5.39275 1.67046 6.23667 1.63087C7.08059 1.59367 7.34896 1.58337 9.49992 1.58337Z"
+                                                fill="#E0BEA2" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_422_46">
+                                                <rect width="19" height="19" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="footer-link-svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_422_49)">
+                                            <path
+                                                d="M9.49992 15.8334C11.1796 15.8334 12.7905 15.1661 13.9783 13.9784C15.166 12.7907 15.8333 11.1797 15.8333 9.50004C15.8333 7.82034 15.166 6.20943 13.9783 5.0217C12.7905 3.83397 11.1796 3.16671 9.49992 3.16671C7.82021 3.16671 6.20931 3.83397 5.02158 5.0217C3.83385 6.20943 3.16659 7.82034 3.16659 9.50004C3.16659 11.1797 3.83385 12.7907 5.02158 13.9784C6.20931 15.1661 7.82021 15.8334 9.49992 15.8334ZM9.49992 17.4167C5.12754 17.4167 1.58325 13.8724 1.58325 9.50004C1.58325 5.12767 5.12754 1.58337 9.49992 1.58337C13.8723 1.58337 17.4166 5.12767 17.4166 9.50004C17.4166 13.8724 13.8723 17.4167 9.49992 17.4167ZM7.03784 10.4263L5.06025 9.80958C4.63275 9.67896 4.63038 9.38446 5.15604 9.17308L12.8613 6.19642C13.3086 6.01433 13.562 6.24471 13.4171 6.82183L12.1053 13.0127C12.0135 13.4536 11.7483 13.5589 11.3801 13.3555L9.36059 11.8608L8.41929 12.7696C8.32271 12.863 8.24434 12.943 8.0955 12.9628C7.94746 12.9834 7.82554 12.939 7.73609 12.6936L7.04734 10.4207L7.03784 10.4263Z"
+                                                fill="#E0BEA2" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_422_49">
+                                                <rect width="19" height="19" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <a href="#" class="footer-link">+38(073) 096 36 44</a>
+                            <a href="#" class="footer-link">info@yanki.com</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <p class="particl">©️ 2021 Yanki. All rights reserved</p>
+        </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
