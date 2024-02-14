@@ -5,6 +5,16 @@ const favorite = document.querySelectorAll('.product-card-svg');
 const articleBtn = document.querySelector('.catalog-article-btn');
 const article = document.querySelector('.catalog-article');
 
+
+
+const accord = document.getElementsByClassName('contentBx');
+
+for (i = 0; i < accord.length; i++) {
+    accord[i].addEventListener('click', function () {
+        this.classList.toggle('actives');
+    })
+}
+
 favorite.forEach(favoriteClick => {
     favoriteClick.addEventListener('click', () => {
         favoriteClick.classList.toggle('--active-favorit');
@@ -26,13 +36,7 @@ function selectCurrency(currency) {
     document.getElementById("selectedCurrency").textContent = currency;
 }
 
-const accord = document.getElementsByClassName('contentBx');
 
-for (i = 0; i < accord.length; i++) {
-    accord[i].addEventListener('click', function () {
-        this.classList.toggle('actives');
-    })
-}
 
 // ДОБАВЛЕНИЕ ТОВАРОВ В КОРЗИНУ
 document.addEventListener("DOMContentLoaded", function () {
