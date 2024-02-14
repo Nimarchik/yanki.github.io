@@ -428,7 +428,7 @@ body {
 	transition: all 0.4s;
 }
 .best:hover {
-    text-shadow: 0 0 10px #000;
+	text-shadow: 0 0 10px #000;
 	transition: all 0.4s;
 }
 
@@ -557,6 +557,14 @@ swiper-slide {
 @media (max-width: 1024px) {
 	.container {
 		width: 900px;
+	}
+	.img_yanki {
+		width: 303px;
+		height: 327px;
+		border-radius: 10px;
+	}
+	.content_yanki-footer {
+		font-size: 24px;
 	}
 }
 
@@ -835,5 +843,23 @@ swiper-slide {
 		margin: 0 auto;
 		text-align: center;
 		margin-top: 30px;
+	}
+
+	.content_yanki {
+		flex-direction: column;
+	}
+
+	.img_yanki {
+		height: 413px;
+	}
+	.brend {
+		flex-direction: column-reverse;
+	}
+	.content_yanki-footer {
+		font-size: 18px;
+		width: 100%;
+	}
+	.content_yanki-text {
+		font-size: 16px;
 	}
 }
